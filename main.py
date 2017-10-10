@@ -8,10 +8,10 @@ import os
 def img_crawler(max_page):
     page = 1
     while page <= max_page:
-        path = os.path.join(r'C:\Users\Suyog\PycharmProjects\Learning\Kingdom', str(page))
+        path = os.path.join(r'C:\Folder_path', str(page))
         if not os.path.exists(path):
             os.makedirs(path)
-            url = 'http://mangakakalot.com/chapter/kingdom/chapter_' + str(page)
+            url = 'http://mangakakalot.com/chapter/manganame/chapter_' + str(page)
             source_code = requests.get(url)
             plain_text = source_code.text
             soup = BeautifulSoup(plain_text, "html.parser")
